@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  background: #101010;
+  color: #dfdfd6;
+  font-family: Raleway, sans-serif;
+}
+
+@theme {
+  --color-gray-my: #dfdfd6;
+}
+
+@layer components {
+  @keyframes background {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+    
+  }
+  .max-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    background: linear-gradient(180deg, #fff, #ffffff87);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-wrap: balance;
+  }
+
+  .background {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    right: 0;
+    bottom: -60%;
+    width: 100%;
+    opacity: 0.4;
+    animation: background 2s;
+    background: url(/noise.png), radial-gradient(circle at right center, #694b2980, #775d32 25%, #8c6a37 40%, #a87d40 65%, #73583280);
+    -webkit-mask-image: radial-gradient(ellipse 150% 30% at center center, #000 20%, #00000080 50%, #0000);
+    mask-image: radial-gradient(ellipse 150% 30% at center center, #000 20%, #00000080 50%, #0000);
+  }
+}
