@@ -1,4 +1,6 @@
 import { BiDownload } from "react-icons/bi"
+import { Button } from "./ui/button"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -9,10 +11,12 @@ const Header = () => {
                 <img className="w-10" src="/logo.svg" alt="" />
                 <span className="font-semibold text-xl text-[#dfdfd6]">M-ali.dev</span>
               </a>
-              <a className="flex items-center gap-2 py-2 px-3.5 rounded-lg bg-[#dfdfd6] text-[#0f0f0fcc] hover:bg-white duration-150" download href="">
-                <BiDownload size={18} />
-                <span className="font-semibold text-[14px]">Резюме</span>
-              </a>
+              <Link download to="/">
+                <Button className="cursor-pointer">
+                  <BiDownload size={18} />
+                  <span className="font-semibold text-[14px]">Резюме</span>
+                </Button>
+              </Link>
             </nav>
         </div>
     </header>
