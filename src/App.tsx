@@ -8,7 +8,7 @@ import { Card } from './components/ui/card'
 import { BsGlobe } from 'react-icons/bs'
 
 function App() {
-  const [filtered, setFiltered] = useState<string[]>([])
+  const [filtered, setFiltered] = useState<string[]>(["React", "TypeScript"])
   const technologies = ["React", "TypeScript", "Redux", "Zustand", "React Router", "SCSS", "TailwindCSS", "shadcn", "Firebase", "React Query"]
 
   const filteredProjects = filtered.length ? projects.filter(project =>
