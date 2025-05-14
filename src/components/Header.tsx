@@ -11,12 +11,12 @@ const Header = () => {
                 <img className="w-10" src="/logo.svg" alt="" />
                 <span className="font-semibold text-xl text-[#dfdfd6]">M-ali.dev</span>
               </a>
-              <Link download to="/">
+              <a download href="/mukhammedali-akhmet-cv.pdf">
                 <Button className="cursor-pointer">
                   <BiDownload size={18} />
                   <span className="font-semibold text-[14px]">Резюме</span>
                 </Button>
-              </Link>
+              </a>
             </nav>
         </div>
     </header>
