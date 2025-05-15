@@ -19,15 +19,15 @@ function App() {
     <>
       <Header />
       <main className='mt-[70px] mb-10'>
-        <section className='py-28'>
+        <section className='py-[80px_40px] sm:py-28'>
           <div className="max-container flex flex-col items-center justify-center text-center">
             <div className="flex flex-col items-center gap-4">
               <p className='flex items-center gap-1 opacity-70'>
                 <CiLocationOn strokeWidth={1} size={18} />
                 <span>Астана, Казахстан</span>
               </p>
-              <h1 className="text-7xl">Frontend <br /> Разработчик</h1>
-              <p className="font-medium text-xl opacity-90 mt-2">Ахмет Мухаммедали</p>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl">Frontend <br /> Разработчик</h1>
+              <p className="font-medium text-lg sm:text-xl opacity-90 sm:mt-2">Ахмет Мухаммедали</p>
               <ul className='flex items-center gap-4'>
                 <li>
                   <a href="https://www.t.me/plewfx">
@@ -45,10 +45,10 @@ function App() {
           </div>
         </section>
         <div className="w-2/3 h-[1px] bg-gray-my/10 mx-auto"></div>
-        <section className='mt-20'>
-          <div className="max-container flex flex-col gap-6">
+        <section className='mt-10 sm:mt-20'>
+          <div className="max-container flex flex-col gap-5 sm:gap-10">
             <h1 className='text-5xl'>Проекты</h1>
-            <div className="flex justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {technologies.map(tech => (
                 <Button key={tech} className={"flex items-center gap-2 cursor-pointer" + (filtered.includes(tech) ? " border" : " bg-transparent")} onClick={() => {
                   filtered.includes(tech) ?
@@ -58,16 +58,16 @@ function App() {
                     setFiltered((prev) => [...prev, tech])
                 }} variant={filtered.includes(tech) ? "default" : "outline"}>
                   <img className="w-5" src={`/technologies/${tech.toLocaleLowerCase()}.svg`} alt="" />
-                  <span className="font-semibold">{tech}</span>
+                  <span className="max-sm:hidden font-semibold">{tech}</span>
                 </Button>
               ))}
             </div>
-            <ul className="grid grid-cols-4 gap-6 mt-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredProjects.map(project => (
                 <li key={project.id}>
-                  <Card className="bg-transparent p-2 gap-2">
-                    <img className="w-full h-37 rounded-xl" src={`/projectScreenshots/${project.title.toLowerCase()}Poster.png`} alt="" />
-                    <div>
+                  <Card className="bg-transparent p-2 sm:p-3 gap-4">
+                    <img className="w-full h-50 sm:h-37 rounded-xl" src={`/projectScreenshots/${project.title.toLowerCase()}Poster.png`} alt="" />
+                    <div className="flex flex-col gap-1">
                       <h2 className="font-bold text-2xl">{project.title}</h2>
                       <ul className="flex gap-2 mt-2">
                         {project.technologies.map(tech => (
