@@ -66,7 +66,7 @@ function App() {
               {filteredProjects.map(project => (
                 <li key={project.id}>
                   <Card className="bg-transparent p-2 sm:p-3 gap-4">
-                    <img className="w-full h-50 sm:h-37 rounded-xl" src={`/projectScreenshots/${project.title.toLowerCase()}Poster.png`} alt="" />
+                    <img className="w-full aspect-[16/8] rounded-xl" src={`/projectScreenshots/${project.title.toLowerCase()}Poster.png`} alt="" />
                     <div className="flex flex-col gap-1">
                       <h2 className="font-bold text-2xl">{project.title}</h2>
                       <ul className="flex gap-2 mt-2">
